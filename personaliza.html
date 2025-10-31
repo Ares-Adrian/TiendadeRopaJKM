@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaliza tu prenda - Tienda de Ropa Deportiva</title>
+    <link rel="icon" href="Favicon/Favicon 2.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (!loggedInUser) {
+                alert('Debes iniciar sesión o crear una cuenta para personalizar tu prenda.');
+                window.location.href = 'usuario.html';
+            }
+        });
+    </script>
+    <header>
+        <div class="header-content">
+            <img src="Imagenes/Logo.png" alt="Logo" class="header-logo">
+            <a href="carrito.html" style="position: absolute; top: 20px; right: 80px;">
+                <img src="Imagenes/Carrito.png" alt="Carrito" style="width: 50px;">
+            </a>
+            <a href="usuario.html" style="position: absolute; top: 20px; right: 20px;">
+                <img src="Imagenes/Usuario.png" alt="Usuario" style="width: 50px;">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personaliza.html" class="personaliza-link">Personaliza tu prenda</a></li>
+                <li><a href="cliente.html">Datos del Cliente</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="personaliza">
+            <h2>Personaliza tu prenda</h2>
+            <form>
+                <label for="prenda">Elige una prenda:</label>
+                <select id="prenda" name="prenda" onchange="showOptions()">
+                    <option value="">-- Selecciona una prenda --</option>
+                    <option value="Polera deportiva Premium">Polera deportiva Premium</option>
+                    <option value="Shorts Deportivos Premium">Shorts Deportivos Premium</option>
+                    <option value="Chaqueta Deportiva Premium">Chaqueta Deportiva Premium</option>
+                    <option value="Pelota de futbol">Pelota de futbol</option>
+                    <option value="Canillera deportiva Premium">Canillera deportiva Premium</option>
+                </select>
+
+                <div id="colores-comun" style="display: none;">
+                    <label for="color-comun">Colores disponibles:</label>
+                    <select id="color-comun" name="color-comun">
+                        <option value="#FFFFFF">Blanco</option>
+                        <option value="#000000">Negro</option>
+                        <option value="#FF0000">Rojo</option>
+                        <option value="#0033CC">Azul Royal</option>
+                        <option value="#008000">Verde</option>
+                        <option value="#FFFF00">Amarillo</option>
+                        <option value="#FF6600">Naranja</option>
+                        <option value="#800080">Morado</option>
+                        <option value="#333333">Gris Oscuro</option>
+                    </select>
+                </div>
+
+                <div id="tallas" style="display: none;">
+                    <label for="talla">Tallas disponibles:</label>
+                    <select id="talla" name="talla">
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+
+                <div id="telas" style="display: none;">
+                    <label for="tela">Telas Disponibles:</label>
+                    <select id="tela" name="tela">
+                        <option value="Puma">Puma</option>
+                        <option value="Win Fresh">Win Fresh</option>
+                        <option value="Hexagonal">Hexagonal</option>
+                        <option value="Dry Fit">Dry Fit</option>
+                    </select>
+                </div>
+
+                <div id="cantidad" style="display: none;">
+                    <label for="cantidad-input">Cantidad:</label>
+                    <input type="number" id="cantidad-input" name="cantidad" min="1" max="30">
+                </div>
+
+                <div id="personalizacion" style="display: none;">
+                    <label for="texto-personalizacion">Opciones de personalización (texto):</label>
+                    <input type="text" id="texto-personalizacion" name="texto-personalizacion">
+                </div>
+
+                <button type="submit">Añadir al carrito</button>
+                <img src="Imagenes/jug-jug-c-f.jpeg" alt="Imagen decorativa" style="display: block; margin: 25px auto;">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Tienda de Ropa Deportiva</p>
+    </footer>
+    <script src="scripts.js"></script>
+    <script src="admi.js"></script>
+    <script src="user.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Cliente - Tienda de Ropa Deportiva</title>
+    <link rel="icon" href="Favicon/Favicon 2.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="Imagenes/Logo.png" alt="Logo" class="header-logo">
+            <a href="carrito.html" style="position: absolute; top: 20px; right: 80px;">
+                <img src="Imagenes/Carrito.png" alt="Carrito" style="width: 50px;">
+            </a>
+            <a href="usuario.html" style="position: absolute; top: 20px; right: 20px;">
+                <img src="Imagenes/Usuario.png" alt="Usuario" style="width: 50px;">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personaliza.html">Personaliza tu prenda</a></li>
+                <li><a href="cliente.html" class="cliente-link">Datos del Cliente</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="datos-cliente">
+            <h2>Mis Datos</h2>
+            <div id="user-info">
+                <!-- User information will be loaded here by JavaScript -->
+                <p>Cargando datos del usuario...</p>
+            </div>
+            <button id="logout-button" style="display: none;">Cerrar Sesión</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Tienda de Ropa Deportiva</p>
+    </footer>
+    <script src="user.js"></script>
+</body>
+</html>

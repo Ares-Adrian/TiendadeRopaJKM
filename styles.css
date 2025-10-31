@@ -1,0 +1,204 @@
+/* 💡 Definición de la Fuente Personalizada */
+@font-face {
+    /* **Importante**: Este nombre debe coincidir EXACTAMENTE con el usado en header h1 */
+    font-family: 'RavenStorm Personal'; 
+    /* La ruta relativa asume que la carpeta 'fonts' está al mismo nivel que styles.css */
+    src: url('fonts/11zon_RavenStorm_PERSONAL_USE_ONLY.woff') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'KOMIKAX';
+    src: url('fonts/11zon_KOMIKAX_.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'KOMIKAX', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4; /* Fondo muy claro de la página */
+    color: #203b4e; /* Color principal de texto (oscuro) */
+}
+
+/* --------------------------------- */
+
+header {
+    background: linear-gradient(to top, #0e4d92, #48baff);
+    color: #ffffff; /* Texto blanco para contraste */
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* 💡 Aplicación de la tipografía al h1 (Título "Tienda de Ropa Deportiva") */
+header h1 {
+    /* **CORREGIDO**: Usamos el nombre 'RavenStorm Personal' definido arriba */
+    font-family: 'RavenStorm Personal', sans-serif; 
+    font-size: 3em;
+}
+
+/* --------------------------------- */
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #ffffff; /* Enlaces blancos en el encabezado oscuro */
+    text-decoration: none;
+}
+
+.catalogo-link {
+    font-size: 2em;
+}
+
+.personaliza-link {
+    font-size: 2em;
+}
+
+.cliente-link {
+    font-size: 2em;
+}
+
+/* --------------------------------- */
+
+main {
+    padding: 2rem;
+}
+
+.banner {
+    background-color: #dff7f9; /* Placeholder background color */
+    text-align: center;
+    padding: calc(2rem - 10px) 1rem;
+    margin-bottom: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.producto {
+    border: 1px solid #3a95cc; /* Borde del color de acento/secundario */
+    background-color: #ffffff; /* Fondo blanco para los productos */
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+}
+
+/* --------------------------------- */
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form select,
+form textarea {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #3a95cc; /* Borde de campo de formulario */
+}
+
+form button {
+    background-color: #3a95cc; /* Color de acento/botón principal */
+    border: none;
+    color: #ffffff; /* Texto blanco en el botón */
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer; /* Añadido para mejor usabilidad */
+}
+
+/* --------------------------------- */
+
+footer {
+    background-color: #203b4e; /* Un tono oscuro diferente para el pie de página */
+    color: #ffffff; /* Texto blanco para contraste */
+    padding: 1rem;
+    text-align: center;
+}
+
+.inicio-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.inicio-logo {
+    max-width: 600px;
+}
+
+.inicio-texto {
+    text-align: center;
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .inicio-container {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    nav li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .producto {
+        display: block;
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .header-logo {
+        width: 100px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .catalogo-link,
+    .personaliza-link,
+    .cliente-link {
+        font-size: 1.5em;
+    }
+
+    #inicio img {
+        width: 100%;
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-logo {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+}
